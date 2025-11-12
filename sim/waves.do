@@ -42,6 +42,7 @@ add wave -hex  UUT/M1_unit/SRAM_write_data
 add wave -bin  UUT/M1_unit/SRAM_we_n
 add wave -hex  UUT/M1_unit/SRAM_read_data
 add wave -hex  UUT/M1_unit/leadout
+add wave -hex  UUT/M1_unit/M1_stop
 
 
 # Helpful internal addresses (declared in module)
