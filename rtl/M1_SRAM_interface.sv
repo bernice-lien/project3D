@@ -372,7 +372,7 @@ always_ff @ (posedge Clock or negedge Resetn) begin
             SRAM_write_data <= { $unsigned(Re_c), $unsigned(Ge_c) };
             SRAM_address_RGB <= SRAM_address_RGB + 18'b1;
             if (leadout >= 8'd90) begin
-                    SRAM_address_V <= SRAM_address_V + 1'b1;
+                     SRAM_address_V <= SRAM_address_V + 1'b1;
                     Vreg[0] <= Vreg[1];
                     Vreg[1] <= Vreg[2];
                     Vreg[2] <= Vreg[3];
