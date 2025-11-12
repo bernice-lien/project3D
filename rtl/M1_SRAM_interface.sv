@@ -462,7 +462,9 @@ always_ff @ (posedge Clock or negedge Resetn) begin
             SRAM_write_data <= {Go_c, Bo_c};
             SRAM_address <= SRAM_address_RGB;
             SRAM_address_RGB <= SRAM_address_RGB + 18'b1;
-          
+            if (SRAM_address_RGB == 16'd262142) begin
+                M1_stop <= 1'b1;
+            end
             M1_SRAM_state <= M1_IDLE;
         end
         M1_LO2: begin
